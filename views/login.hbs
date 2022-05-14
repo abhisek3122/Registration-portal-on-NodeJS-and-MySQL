@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BillX</title>   
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <h1>Login Here</h1>
+        <form action="/auth/login" method="POST" >
+            <p>Username</p>
+            <input type="text" name="uname" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="login_btn" value="Login" id="loginfrm">
+            
+            <h3><a href="register">REGISTER</a></h3>
+            
+            {{#if message}}
+                <h4 class="alert-form"> {{message}} </h4>
+            {{/if}}
+        </form>
+    </div>    
+</body>
+</html>
